@@ -32,7 +32,7 @@ const server = http.createServer((req, res) => {
   const searchParameters = formattedUrl.query;
   const requestedPath = formattedUrl.pathname;
   // Regular Expressions -> REGEX
-  const trimmedPath = requestedPath.replace(/^\/+|\/+$/g, '')
+  const trimmedPath = requestedPath.replace(/^\/+|\/+$/g, '');
   // console.log('QUERY', searchParameters);
 
   let body = '';

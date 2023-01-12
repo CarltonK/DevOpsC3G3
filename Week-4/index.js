@@ -4,9 +4,9 @@ const url = require('url');
 const routeImport = require('./router');
 
 // System Variables
-const hostname = '127.0.0.1';
+// const hostname = '127.0.0.1';
 // Acceptable port numbers to use = [3000-5000]
-const port = 3000;
+const port = process.env.PORT;
 
 // Creating the server
 const server = http.createServer((req, res) => {
@@ -71,6 +71,6 @@ const server = http.createServer((req, res) => {
 });
 
 // Start the server
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+server.listen(port, () => {
+  console.log(`Server running at ${port}`);
 });

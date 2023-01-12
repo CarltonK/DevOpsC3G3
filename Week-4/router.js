@@ -13,7 +13,8 @@ handlers.notFound = (payload, callback) => {
 };
 
 handlers.loginHandler = (payload, callback) => {
-    callback(300, 'This feature is coming soon');
+    const fileData = fs.readFileSync('public/login.html');
+    callback(200, fileData.toString());
 };
 
 const router = {

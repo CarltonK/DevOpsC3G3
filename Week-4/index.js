@@ -4,7 +4,7 @@ const url = require('url');
 const routeImport = require('./router');
 
 // System Variables
-// const hostname = '127.0.0.1';
+// const hostname = 'localhost';
 // Acceptable port numbers to use = [3000-5000]
 const port = process.env.PORT;
 

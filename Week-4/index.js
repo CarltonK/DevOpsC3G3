@@ -53,7 +53,7 @@ const server = http.createServer((req, res) => {
     };
 
     routeHandler(payload, (statusCode, payloadData) => {
-      const payloadString = JSON.stringify(payloadData);
+      // const payloadString = JSON.stringify(payloadData);
       // Status codes
       // 200 - 299 -> Success -> 200 -> Success, 201 -> Resource created successfully on server, 204 -> Logout
       // 300 - 399 -> Redirection -> 302 - The server has permanently moved
@@ -62,10 +62,10 @@ const server = http.createServer((req, res) => {
       res.statusCode = statusCode;
 
       // Headers -> A way for either the server/client to pass additional information
-      res.setHeader('Content-Type', 'text/plain');
+      res.setHeader('Content-Type', 'text/html');
 
       // Terminating the request
-      res.end(payloadString);
+      res.end(payloadData);
     });
   });
 });

@@ -1,13 +1,15 @@
+const fs = require('fs');
+
 const handlers = {};
 
 handlers.homeHandler = (payload, callback) => {
-    // TODO: Replace with an actual HTML file
-    callback(200, 'You have requested for the home page');
+    const fileData = fs.readFileSync('public/home.html');
+    callback(200, fileData.toString());
 };
 
 handlers.notFound = (payload, callback) => {
-    // TODO: Replace with an actual HTML file
-    callback(400, 'The resource you requested for is not available');
+    const fileData = fs.readFileSync('public/404.html');
+    callback(400, fileData.toString());
 };
 
 handlers.loginHandler = (payload, callback) => {

@@ -1,3 +1,3 @@
 ## Basic README
 
-Week 5 node with mongo & git basics
+Week five node with mongo & git basics

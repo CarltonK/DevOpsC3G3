@@ -3,3 +3,5 @@ This readme is the demonistration of the Week-2, Week-3, Week-4 and Week-5 for C
 
 Week five node with mongo & git basics
 mic check 1 2
+
+# Force anyone with a fork to sync

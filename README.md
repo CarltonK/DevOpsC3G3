@@ -7,4 +7,4 @@ mic check 1 2
 # Force anyone with a fork to sync
 
 
-## mouriceCollaboration Thursday
+## Collaboration Thursday

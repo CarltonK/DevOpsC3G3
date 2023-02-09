@@ -11,9 +11,13 @@ mic check 1 2
 # Force anyone with a fork to sync
 
 
+<<<<<<< HEAD
+## Collaboration Thursday
+=======
 ## mourice
 >>>>>>> 4389f6e369a5452c462c2b3e0318f7cbe6dbe68b
 
 
 # The list of contributors
 
+>>>>>>> 88fc611fcc782be1268f6a7749d6bf01c809f6fa

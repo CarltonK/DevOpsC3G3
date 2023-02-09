@@ -1,3 +1,4 @@
 ## Basic README
 
-# Updated list of Authors
+# List of Authors
+

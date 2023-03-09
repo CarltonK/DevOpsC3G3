@@ -14,7 +14,3 @@ Moses request on readme
 ## Modified by Diana
 
 ## Trigger push to main
-
-## Automated trigger
-
-## Automated trigger 2

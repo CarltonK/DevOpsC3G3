@@ -11,21 +11,13 @@ pipeline {
         }
         stage('Clone the repository') {
             steps {
-                git url: 'https://github.com/CarltonK/DevOpsC3G3.git', branch: 'main'
+                git url: 'https://github.com/CarltonK/yolo-testing-g3.git', branch: 'master'
             }
         }
-        stage('Install dependencies') {
+        stage('Docker is installed') {
             steps {
                 sh '''
-                   cd Week-5
-                   npm install
-                   '''
-            }
-        }
-        stage('Deploy to Render') {
-            steps {
-                sh '''
-                   curl -X GET https://api.render.com/deploy/srv-cfqrsipgp3joa8gevua0?key=2TNnrkN-rhA&ref=5c360fc
+                   docker --version
                    '''
             }
         }

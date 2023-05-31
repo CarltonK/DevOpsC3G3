@@ -3,3 +3,7 @@
   tasks:
     - name: Update the cache
       shell: 'sudo apt update'
+    - name: Install node and npm
+      shell: 'apt install nodejs npm'
+    - name: Confirm nodejs version
+      shell: 'node -v'

@@ -26,4 +26,6 @@
         dest: "{{ app_folder }}/docker-compose.yaml"
 
     - name: Start containers
-      shell: 'docker-compose up -d'
+      shell: "docker-compose up -d"
+      args:
+        chdir: "{{ app_folder }}"

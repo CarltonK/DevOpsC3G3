@@ -2,4 +2,4 @@
   hosts: all
   tasks:
     - name: Update the cache
-      shell: 'apt update'
+      shell: 'sudo apt update'

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: devopsg3-k8s-config-map
+data:
+  NODE_ENV: "kubernetes"
+    

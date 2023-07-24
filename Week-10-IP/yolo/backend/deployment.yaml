@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devopsg3-yolo-backend-deployment
+  labels:
+    app: devopsg3-yolo-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devopsg3-yolo-backend
+  template:
+    metadata:
+      labels:
+        app: devopsg3-yolo-backend
+    spec:
+      containers:
+        - name: devopsg3-yolo-backend
+          image: hawksdev/devopsg3-yolo-backend:1.0.0
+          ports:
+            - containerPort: 5000
+          env:
+            - name: MONGODB_URI
+              valueFrom:
+                secretKeyRef:
+                  name: devopsg3-yolo-backend-secrets
+                  key: MONGODB_URI

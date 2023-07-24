@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: devopsg3-yolo-database-deployment
+  labels:
+    app: devopsg3-yolo-database
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devopsg3-yolo-database
+  template:
+    metadata:
+      labels:
+        app: devopsg3-yolo-database
+    spec:
+      containers:
+        - name: devopsg3-yolo-database
+          image: mongo
+          ports:
+            - containerPort: 27017
+          volumeMounts:
+            - name: database-volume-yolo
+              mountPath: /data/db
+          env:
+            - name: MONGO_INITDB_ROOT_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: devopsg3-yolo-database-secrets
+                  key: MONGO_INITDB_ROOT_USERNAME
+            - name: MONGO_INITDB_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: devopsg3-yolo-database-secrets
+                  key: MONGO_INITDB_ROOT_PASSWORD
+      volumes:
+        - name: database-volume-yolo
+          persistentVolumeClaim:
+            claimName: devopsg3-yolo-database-claim

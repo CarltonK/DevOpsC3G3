@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devopsg3-yolo-client-deployment
+  labels:
+    app: devopsg3-yolo-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devopsg3-yolo-client
+  template:
+    metadata:
+      labels:
+        app: devopsg3-yolo-client
+    spec:
+      containers:
+        - name: devopsg3-yolo-client
+          image: hawksdev/devopsg3-yolo-client:1.0.1
+          tty: true
+          ports:
+            - containerPort: 3000
